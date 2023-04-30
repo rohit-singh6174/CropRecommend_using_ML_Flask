@@ -1,0 +1,8 @@
+To run this file requires "Open Weather API" 
+1) First go to https://openweathermap.org/current
+   Get API key for current location temperature and paste it in route.py file {API-KEY}
+
+2) import MYSQL file 
+
+3) python run.py
+
