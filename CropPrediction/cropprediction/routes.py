@@ -120,7 +120,7 @@ def farmerhome():
     latitude =19.0089 #response['latitude']
     longtitude =72.8574 #response['longitude']
     g =("Cambria", 18,"bold")
-    weather = get('http://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&appid=759096b422c55eebf40c49e1b9887fe7&units=metric'.format(latitude, longtitude)).json()
+    weather = get('http://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&appid={YOUR-APT-KEY}&units=metric'.format(latitude, longtitude)).json()
     #tempdata=weather['main']['temp']
                    
     myweather = (weather['main']['temp'])
@@ -181,7 +181,7 @@ def croppredict():
     latitude =19.0089 #response['latitude']
     longtitude =72.8574 #response['longitude']
     g =("Cambria", 18,"bold")
-    weather = get('http://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&appid=759096b422c55eebf40c49e1b9887fe7&units=metric'.format(latitude, longtitude)).json()
+    weather = get('http://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&appid={YOUR-APT-KEY}7&units=metric'.format(latitude, longtitude)).json()
     #tempdata=weather['main']['temp']
                    
     myweather = (weather['main']['temp'])
@@ -253,7 +253,7 @@ def fertilizer():
     latitude =19.0089 #response['latitude']
     longtitude =72.8574 #response['longitude']
     g =("Cambria", 18,"bold")
-    weather = get('http://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&appid=759096b422c55eebf40c49e1b9887fe7&units=metric'.format(latitude, longtitude)).json()
+    weather = get('http://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&appid={YOUR-APT-KEY}7&units=metric'.format(latitude, longtitude)).json()
     #tempdata=weather['main']['temp']
                    
     myweather = (weather['main']['temp'])
