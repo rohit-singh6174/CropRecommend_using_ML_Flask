@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Freelancers Member</title>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link href="{{ url_for('static', filename= 'css/side_nav_footer.css') }}" rel="stylesheet">
+<body  style="background-color: #f5f5f5;">
+<input type="checkbox" id="check">
+<header>
+<div class="navbar">
+	 <label for="check"><i class="fa fa-bars" id="sidebar_btn" ></i> </label>
+	 <h3>Crops Predictions</h3>
+	 {%if current_user.is_authenticated%}
+	 <a href="/farmerlogout">Logout </a>
+	 {% else %}
+	 <a href="/farmerlogin">Login </a>
+     <a href="/farmerregister">Register </a>
+	 {%endif%}
+</div>
+
+<!--Sidebar -->
+</header>
+<div class="sidebar">
+		<center>
+			<h4>Welcome</h4> 
+		</center>
+		<a href="/farmerhome"><i class="fa fa-home"></i><span> Home</span></a>  
+		<!-- <a href="#"><i class="fas fa-line-chart"></i><span>Crop Predict</span></a>
+		<a href="#"><i class="fas fa-handshake"></i><span>Freelance Req</span></a> -->
+		<a href="/croppredict"><i class="fas fa-calendar-check"></i></i><span>Crop ppredict </span></a>
+		<a href="/fertilizer"><i class="fas fa-calendar-check"></i></i><span>Fertilizer predict </span></a>
+		<!-- <a href="#"><i class="fas fa-calendar-check"></i></i><span>Give Certificate</span></a>
+		<a href="#"><i class="fas fa-calendar-check"></i></i><span>Completed Freelancers</span></a> -->
+		<a href="/farmeraccount"><i class="fa fa-user"></i><span>Account</span> </a>
+	
+	</div>
+
+<!--Main Body Content Here -->
+{% with messages=get_flashed_messages(with_categories=true)%}
+{%if messages %}
+ {%for category,messages in messages%}
+ <div class="alert-{{category}}">
+	 {{messages}}
+	</div>
+ {%endfor%}
+ {% endif %}
+{%endwith%}
+
+{% block body %}
+
+
+
+{% endblock %}
+<!--End Main Content-->
+<!--footer-->
+
+<!--End footer-->
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<!--Main Content -->
+
+<link href="{{ url_for('static', filename= 'css/admin_homechart.css') }}" rel="stylesheet">
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!--Pie -->
+<!--Bar graph-->
+<link href="{{ url_for('static', filename= 'css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename= 'css/jumbotron-narrow.css') }}" rel="stylesheet">
+
+<script src="../static/js/jquery-1.11.2.js"></script>
+<script src="../static/js/Chart.min.js"></script>
+
+
+<div class="minerPage">  
+
+<h1>Welcome Home Farmer</h1>
+
+<script type="text/javascript">
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ['Certified', 30],
+      ['Completed', 20]
+    ]);
+
+    var options = {
+      title: 'My Daily Activities',
+      is3D: true,
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+    chart.draw(data, options);
+  }
+</script>
+
+  <h4>Summary</h4> 
+
+  <div class="card-temp">
+    <img src="{{url_for('static', filename='img/weather.png')}}" alt="about" class="laptop-image" width="150" height="150">
+    <div class="container">
+      <h4 class="data"><b>Temperature</b></h4> <br>
+      <p class="value">{{havaman}} &#8451;</p> 
+      <p class="value">{{city_name}}</p> 
+  </div>
+
+    </div>
+
+  
+  
+
+</div>
+
+<script>
+ 
+  
+</script>
+
+<!--End Main Content-->
+{% endblock %}

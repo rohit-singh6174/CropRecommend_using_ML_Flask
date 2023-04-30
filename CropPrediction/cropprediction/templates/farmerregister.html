@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Farmer Account</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/farmerlogin_page.css') }}">
+  
+  
+<!-- <link rel="stylesheet" href="./style.css"> -->
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="login-form-wrap">
+  <h2>Farmers Register</h2>
+  <img src="{{url_for('static', filename='img/f_avatar.png')}}" alt="Avatar" class="center">
+  <form id="login-form" method="POST" action="">
+    {{ form.hidden_tag() }}
+    <p>
+      {%if form.name.errors%}
+      {{form.name(placeholder="Enter Name")}}
+      {%for error in form.name.errors%}
+      <span><span>{{error}}</span></span>
+      {%endfor%}
+      {%else%}
+      {{form.name(placeholder="Enter Name")}}
+      {%endif%}
+    </p>
+
+    <p>
+      {%if form.phone.errors%}
+      {{form.phone(placeholder="Enter phone")}}
+      {%for error in form.phone.errors%}
+      <span><span>{{error}}</span></span>
+      {%endfor%}
+      {%else%}
+      {{form.phone(placeholder="Enter phone")}}
+      {%endif%}
+    </p>
+
+    <p>
+      {%if form.gender.errors%}
+      {{form.gender()}}
+      {%for error in form.phone.errors%}
+      <span><span>{{error}}</span></span>
+      {%endfor%}
+      {%else%}
+      {{form.gender()}}
+      {%endif%}
+    </p>
+
+    <p>
+      {%if form.district.errors%}
+      {{form.district()}}
+      {%for error in form.district.errors%}
+      <span><span>{{error}}</span></span>
+      {%endfor%}
+      {%else%}
+      {{form.district()}}
+      {%endif%}
+    </p>
+
+    <p>
+      {%if form.farmerid.errors%}
+      {{form.farmerid(placeholder="Enter Farmer Id")}}
+      {%for error in form.phone.errors%}
+      <span><span>{{error}}</span></span>
+      {%endfor%}
+      {%else%}
+      {{form.farmerid(placeholder="Enter Farmer Id")}}
+      {%endif%}
+    </p>
+    
+    <p>
+      {%if form.username.errors%}
+      {{form.username(placeholder='Enter Username')}}
+      {%for error in form.username.errors%}
+      <span><span>{{error}}</span></span>
+      {%endfor%}
+      {%else%}
+      {{form.username(placeholder='Enter Username')}}
+      {%endif%}
+    
+    </p>
+
+    <p>
+      {%if form.password.errors%}
+      {{form.password(placeholder='Enter Password')}}
+      {%for error in form.password.errors%}
+      <span><span>{{error}}</span></span>
+      {%endfor%}
+      {%else%}
+      {{form.password(placeholder='Enter Password')}}
+      {%endif%}
+       
+    </p>
+ 
+    <p>
+      {%if form.confirm_password.errors%}
+      {{form.confirm_password(placeholder='Re-Enter Password')}}
+      {%for error in form.confirm_password.errors%}
+      <span><span>{{error}}</span></span>
+      {%endfor%}
+      {%else%}
+      {{form.confirm_password(placeholder='Re-Enter Password')}}
+      {%endif%}
+      
+    </p>
+
+
+    <p>
+      {{form.submit()}}
+
+    </p>
+   
+    <p>
+      {% with messages=get_flashed_messages(with_categories=true)%}
+      {%if messages %}
+       {%for category,messages in messages%}
+       <div class="alert-{{category}}">
+         {{messages}}
+        </div>
+       {%endfor%}
+       {% endif %}
+      {%endwith%}
+    </p>
+
+  </form>
+  <div id="create-account-wrap">
+    <p>Not a member? <a href="/farmerlogin">I already have an Account</a><p>
+  </div><!--create-account-wrap-->
+</div><!--login-form-wrap-->
+<!-- partial -->
+</body>
+</html>

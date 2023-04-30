@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.minerPage{
+margin-top: 20px;
+margin-left: 250px;
+transition: 0.5s;
+font-family: 'Open Sans', sans-serif;
+
+}
+
+#check:checked~ .minerPage{
+	margin-left: 60px;
+	transition: 0.5s;
+}
+
+.minerPage .stocks{
+    width: 30%;
+    height:auto;
+    padding-right: 40px;
+    float: left;
+}
+
+.minerPage h1{
+	margin-left: 40px;
+	font-size: 40px;
+    margin-bottom: 5px;
+    display: flex;
+}
+.minerPage .mine-reward-condition{
+	margin-top: 5px;
+	margin-left: 40px;
+	font-size: 14px;
+	margin-bottom: 5px;
+	display: flex;
+}
+.minerPage h4{
+	margin-left: 40px;
+	margin-top: 20px;
+	font-size: 20px;
+	display: flex;
+}
+.minerPage .table{
+margin-left: 40px;
+margin-top: 10px;
+width: 95%;
+margin-right: 20px;
+border-spacing: 0.0rem;
+text-align: center;
+}
+
+.minerPage .table .tabel-head{
+	background-color: #cc0000;
+	color: #fff;
+    padding: 0.5rem;
+}
+.minerPage .table td{
+	text-align: center;
+	  padding: 0.5rem;
+}
+.table tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+.Transcations-mine-btn{
+	margin-left: 40px;
+    margin-top: 20px;
+    height: 40px;
+    width: 200px;
+    color: #fff;
+    background-color:#0B7BCD;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+}
+.Transcations-signin-btn{
+	margin-left: 10px;
+    margin-top: 20px;
+    height: 40px;
+    width: 200px;
+    color: #fff;
+    background-color:#0B7BCD;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+}
+.minerPage .Transcations-mine-btn:hover {
+	background-color: #066DB9;
+}
+.minerPage .Transcations-signin-btn:hover {
+	background-color: #066DB9;
+}
+
+/*ALERT*/
+/*.minerPage .miner-alert-danger {
+	display: flex;
+    padding: 10px;
+	margin-top: 5px;
+   margin-bottom: 5px;
+   margin-left:5px ;
+   background-color:#ffe6e6;
+  color:#cc0000; 
+  transition: 0.5s;	
+}
+#check:checked~ .minerPage .miner-alert-danger {
+    margin-left: 60px;
+	transition: 0.5s;	
+}*/
+/*SUCCESS*/
+/*.minerPage .miner-alert-success{
+	display: flex;
+	padding: 10px;
+	margin-top: 5px;
+   margin-bottom: 5px;
+   margin-left:5px ;
+   background-color:#eafaea;
+   color:#056E14;
+   transition: 0.5s;	
+ }
+ .minerPage .miner-alert-success p{
+ color:#056E14;
+ }
+ #check:checked~ .minerPage .miner-alert-success{
+    margin-left: 5px;
+	transition: 0.5s;	
+}*/

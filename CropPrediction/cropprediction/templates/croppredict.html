@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block body %}
+<!--Main Content -->
+<div class="account-page">
+ <link href="{{ url_for('static', filename= 'css/account_form.css') }}" rel="stylesheet">
+<h1 class="account-title"> Crop Predict</h1>
+<form method="POST" action='/predict'>
+<div class="donate">	
+  <label for="title">Temperature</label><br>
+  <input type="text" class="account-page-inputbox" d="_temp" name="temperature" value={{temperature}} placeholder="temp"><br>
+  <label for="title">Nitrogen</label><br>
+  <input type="text" class="account-page-inputbox" name="Temperature" id="first_name"  placeholder="Nitrogen Content of soil"><br>
+  <label for="title">Phosphorus</label><br>
+  <input type="text" class="account-page-inputbox"id="last_name" name="p" placeholder="Phosphorus content of soil"><br>
+  <label for="title">Potassium</label><br>
+  <input type="text" class="account-page-inputbox" id="_name" name="k" placeholder="Potassium content of soil"><br>
+  <label for="title">Humidity</label><br>
+  <input type="text" class="account-page-inputbox"id="_hum" name="Humidity" placeholder="Humidity in %"><br>
+  </div> 
+  <div class="donate">	
+    <label for="title">Ph Level</label><br>
+    <input type="text" class="account-page-inputbox" id="_ph" name="ph" placeholder="Enter Ph Level"><br>
+    <label for="title">Rainfall</label><br>
+    <input type="text" class="account-page-inputbox" id="_rainfall" name="rainfall" placeholder="Enter Rainfall"><br>
+
+    <input type="submit" value="Predict Probability"><br> <br>
+    <textarea class="account-page-inputbox"  rows="10" cols="50" style="height:200px;" >
+      
+      {{rfc_pred}}
+   
+      {{svm_pred}}
+   
+      {{knn_pred}}
+  
+      {{lr_pred}}
+   
+      {{dt_entropy_pred}}
+   
+      {{dt_gini_pred}}
+      </textarea>
+
+
+
+    </div> 
+</form> 
+
+</div>
+
+<!--End Home Page-->
+{% endblock %}
